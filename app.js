@@ -1,5 +1,6 @@
 const http = require('http')
 const fs = require('fs')
+const { listenerCount } = require('process')
 http.createServer(function(req, res){
   console.log(request.url)
   let writeHeadObject = {
@@ -11,4 +12,5 @@ http.createServer(function(req, res){
       console.error('파일을 읽지 못했습니다.');
     }else {
       response.end(data);
-})
+
+}})}).listen(8080);
