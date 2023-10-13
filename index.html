@@ -14,6 +14,7 @@
     body{
       background-color: #e2e2e2;
     }
+    @media (min-width:700px) and (max-width:1920px){
     #navmain{
       background-color: white;
       width:100vw;
@@ -42,9 +43,14 @@
       color: transparent;
       -webkit-background-clip: text;
     }
+    .navcenter>div:nth-child(1)>a>img{
+      width:15vw;
+      height:5vh;
+      display:none;
+    }
     .navcenter>ul:nth-child(2){
       list-style:none;
-      display:none;
+      display:flex;
       width:30vw;
       height:6vh;
       justify-content: space-between;
@@ -86,9 +92,9 @@
 img{
   width:2vw;
   height:4vh;
-}
-
-@media screen and (max-width: 700px) {
+}}
+    
+@media (min-width:0) and (max-width: 700px) {
   *{
       margin:0;
       padding:0;
@@ -126,7 +132,7 @@ img{
       height:5vh;
     }
     .navcenter>ul:nth-child(2){
-      display:flex;
+      display:none;
       width:100vw;
       height:20vh;
       justify-content: space-between;
@@ -135,7 +141,7 @@ img{
     }
     .navcenter>ul:nth-child(2)>li {
       width: 100%;
-      display:flex;
+      display:none;
       height:5vh;
       text-align: center;
       justify-content: center;
@@ -145,7 +151,7 @@ img{
     }
     .navcenter>ul:nth-child(3){
       list-style:none;
-      display:flex;
+      display:none;
       width:100vw;
       height:5vh;
       justify-content: space-between;
@@ -153,7 +159,7 @@ img{
     }
     .navcenter>ul:nth-child(3)>li {
       float: left;
-      display:flex;
+      display:none;
       text-align: center;
       justify-content: center;
       align-items: center;
