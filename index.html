@@ -107,19 +107,17 @@ img{
     flex-direction: column;
     align-items: flex-start;
     background-color: #5f85bb;
-      width:100vw;
-      height:30vh;
+      
       box-shadow: 0px 0px 10px gray;
   }
   .navcenter {
     flex-direction: column;
     align-items: flex-start;
-    width:100vw;
-      height:30vh;
+    
   }
   .navcenter>div:nth-child(1){
       width:100vw;
-      height:5vh;
+      height:7vh;
       display:flex;
       justify-content: space-between;
       margin-left:10vw;
@@ -173,6 +171,9 @@ a{display:block;
   width: 25vw;
   height: 3vh;
 }
+.menu.active , .icons.active {
+    display: flex;
+  }
 }
   </style>
 </head>
@@ -182,13 +183,13 @@ a{display:block;
     <div>송영준
       <a href="#" arialabel="burger.svg" class="toggleBtn"> <img src="burger.svg" alt='burger'/></a>
     </div>
-    <ul>
+    <ul class="menu">
       <li>1번</li>
       <li>2번</li>
       <li>3번</li>
       <li>4번</li>
     </ul>
-    <ul>
+    <ul class="icons">
       <li><a href="http://google.com" target="blank"><img src="google.svg" alt="google"/></a></li>
       <li><a href="https://www.naver.com/" target="blank"><img src="naver.svg" alt="naver"/></a></li>
       <li><a href="https://github.com/" target="blank"><img src="github.svg" alt="github"/></a></li>
@@ -196,5 +197,15 @@ a{display:block;
     </ul>
   </div>
 </div>
+<script>
+  const toggleBtn = document.querySelector('.toggleBtn');
+const menu = document.querySelector('.menu');
+const icons = document.querySelector('.icons');
+console.dir(menu)
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('active')
+  icons.classList.toggle('active')
+})
+</script>
 </body>
 </html>
