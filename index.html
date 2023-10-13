@@ -93,6 +93,7 @@ img{
   width:2vw;
   height:4vh;
 }}
+.navcenter>div:nth-child(1)>a>i{ display:none;}
     
 @media (min-width:0) and (max-width: 700px) {
   *{
@@ -171,17 +172,19 @@ a{display:block;
   width: 25vw;
   height: 3vh;
 }
+.navcenter>div:nth-child(1)>i{font-size: 30px;}
 .menu.active,.icons.active {
   display: flex;
   }
 }
   </style>
+  <script src="https://kit.fontawesome.com/82b8c79a8f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="navmain">
   <div class="navcenter">
     <div>송영준
-      <a href="#" arialabel="burger.svg" class="toggleBtn"> <img src="burger.svg" alt='burger'/></a>
+      <a href="#" arialabel="burger.svg" class="toggleBtn"> <img src="burger.svg" alt='burger'/><i class="fa-solid fa-bars"></i></a>
     </div>
     <ul class="menu">
       <li>1번</li>
@@ -191,9 +194,10 @@ a{display:block;
     </ul>
     <ul class="icons">
       <li><a href="http://google.com" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google"/></a></li>
-      <li><a href="https://www.naver.com/" target="blank"><img src="naver.svg" alt="naver"/></a></li>
-      <li><a href="https://github.com/" target="blank"><img src="github.svg" alt="github"/></a></li>
-      <li><a href="https://notion.so/" target="blank"><img src="notion.svg" alt="notion"/></a></li>
+      <li><a href="https://twitter.com/" target="blank"><img src="naver.svg" alt="twitter"/><i class="fa-brands fa-twitter"></i></a></li>
+      <li><a href="https://github.com/" target="blank"><img src="github.svg" alt="github"/><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://www.facebook.com/" target="blank"><img src="notion.svg" alt="facebook"/><i class="fa-brands fa-facebook"></i>
+      </a></li>
     </ul>
   </div>
 </div>
