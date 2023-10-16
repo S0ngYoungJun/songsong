@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    #board{
+      width:100vw;
+      height:100vh;
+    }
+    #board>ul:nth-child(1){
+      width:100vw;
+      height:15vh;
+      list-style:none;
+      display: flex;
+      }
+      #board>ul:nth-child(1)>li:nth-child(1){
+      width:12.5vw;
+      height:15vh;
+      background-color: rosybrown;
+      float: left;
+      }
+      #board>ul:nth-child(1)>li:nth-child(2){
+      width:12.5vw;
+      height:15vh;
+      background-color: purple;
+      float: left;
+      }#board>ul:nth-child(1)>li:nth-child(3){
+      width:12.5vw;
+      height:15vh;
+      background-color: bisque;
+      float: left;
+      }#board>ul:nth-child(1)>li:nth-child(4){
+      width:12.5vw;
+      height:15vh;
+      background-color: red;
+      }#board>ul:nth-child(1)>li:nth-child(5){
+      width:12.5vw;
+      height:15vh;
+      background-color: blue;
+      float: left;
+      }
+      #board>ul:nth-child(1)>li:nth-child(6){
+      width:12.5vw;
+      height:15vh;
+      background-color: violet;
+      float: left;
+      }#board>ul:nth-child(1)>li:nth-child(7){
+      width:12.5vw;
+      height:15vh;
+      background-color: forestgreen;
+      float: left;
+      }#board>ul:nth-child(1)>li:nth-child(8){
+      width:12.5vw;
+      height:15vh;
+      background-color: skyblue;
+      float: left;
+      }
+    #board>ul:nth-child(2){
+      position: absolute;
+      width:12.5vw;
+      height:70vh;
+      top: 15vh;
+      list-style:none;
+    } 
+    #board>ul:nth-child(2)>li:nth-child(1){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: violet;
+    } 
+    #board>ul:nth-child(2)>li:nth-child(2){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: forestgreen;
+    } #board>ul:nth-child(2)>li:nth-child(3){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: red;
+    } #board>ul:nth-child(2)>li:nth-child(4){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: rosybrown;
+    } #board>ul:nth-child(2)>li:nth-child(5){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: lightcyan
+    } #board>ul:nth-child(2)>li:nth-child(6){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: darkblue
+    } 
+    #board>ul:nth-child(3){
+      width:100vw;
+      height:15vh;
+      list-style:none;
+      display: flex;
+      background-color: aqua;
+      margin-top:70vh;
+      list-style:none;
+      }
+      #board>ul:nth-child(3)>li:nth-child(1){
+      width:12.5vw;
+      height:15vh;
+      background-color: rosybrown;
+      float: left;
+      }
+      #board>ul:nth-child(3)>li:nth-child(2){
+      width:12.5vw;
+      height:15vh;
+      background-color: purple;
+      float: left;
+      }#board>ul:nth-child(3)>li:nth-child(3){
+      width:12.5vw;
+      height:15vh;
+      background-color: bisque;
+      float: left;
+      }#board>ul:nth-child(3)>li:nth-child(4){
+      width:12.5vw;
+      height:15vh;
+      background-color: red;
+      }#board>ul:nth-child(3)>li:nth-child(5){
+      width:12.5vw;
+      height:15vh;
+      background-color: blue;
+      float: left;
+      }
+      #board>ul:nth-child(3)>li:nth-child(6){
+      width:12.5vw;
+      height:15vh;
+      background-color: violet;
+      float: left;
+      }#board>ul:nth-child(3)>li:nth-child(7){
+      width:12.5vw;
+      height:15vh;
+      background-color: forestgreen;
+      float: left;
+      }#board>ul:nth-child(3)>li:nth-child(8){
+      width:12.5vw;
+      height:15vh;
+      background-color: skyblue;
+      float: left;
+      }
+      #board>ul:nth-child(4){
+      position: absolute;
+      width:12.5vw;
+      height:70vh;
+      top: 15vh;
+      left: 87.5vw;
+      list-style:none;
+    } 
+    #board>ul:nth-child(4)>li:nth-child(1){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: violet;
+    } 
+    #board>ul:nth-child(4)>li:nth-child(2){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: forestgreen;
+    } #board>ul:nth-child(4)>li:nth-child(3){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: red;
+    } #board>ul:nth-child(4)>li:nth-child(4){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: rosybrown;
+    } #board>ul:nth-child(4)>li:nth-child(5){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: lightcyan
+    } #board>ul:nth-child(4)>li:nth-child(6){
+      width:12.5vw;
+      height:11.6vh;
+      background-color: darkblue
+    }
+    #board>div{
+      position:absolute;
+      top:15vh;
+      left:12.5vw;
+      width:75vw;
+      height:70vh;
+      background-image: url(123.png);
+      background-size: cover;
+    }
+    li{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px dotted black
+    }  
+
+   button{
+      width:5vw;
+      height:5vw;
+      border-radius: 20px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="board">
+    <ul>
+      <li class="21"></li>
+      <li class='20'></li>
+      <li class='19'></li>
+      <li class='18'></li>
+      <li class='17'></li>
+      <li class='16'></li>
+      <li class='15'></li>
+      <li class='14'></li>
+    </ul>
+    <ul>
+      <li class='22'></li>
+      <li class='23'></li>
+      <li class='24'></li>
+      <li class='25'></li>
+      <li class='26'></li>
+      <li class='27'></li>
+    </ul>
+    <ul>
+      <li class="0"><button>1</button></li>
+      <li class="1"></li>
+      <li class="2"></li>
+      <li class="3"></li>
+      <li class="4"></li>
+      <li class="5"></li>
+      <li class="6"></li>
+      <li class="7"></li>
+    </ul>
+    <ul>
+      <li class='13'></li>
+      <li class='12'></li>
+      <li class='11'></li>
+      <li class='10'></li>
+      <li class='9'></li>
+      <li class='8'></li>
+    </ul>
+    <div></div>
+  </div>
+  <script>
+    let number= 0
+    // let coin = document.getElementById("coin")
+    let board = document.getElementById("board")
+    // let box = document.createElement("button")
+    let button = document.querySelector('button')
+    let li= document.getElementsByTagName('li')
+    console.dir(li)
+    
+    let ul = board.children[0];
+    // box.style.width= "5vw";
+    // box.style.height="5vh";
+    // box.style.backgroundColor="white";
+    
+    function de(){
+      button.remove()
+    }
+      button.addEventListener("click",function(){
+        number += Math.floor(Math.random()*5)+1
+        pan = document.getElementsByClassName(`${number}`)
+        console.log(number)
+        if(number>27){
+          number = number%28
+          pan = document.getElementsByClassName(`${number}`)
+          pan[0].appendChild(button)
+          console.log(number)
+        }else{
+        pan[0].appendChild(button)}
+      } )
+      
+      
+   
+  </script>
+</body>
+</html>

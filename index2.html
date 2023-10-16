@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+    #root{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 40vw;
+      height: 50vh;
+    }
+    #root>h1{
+      width: 40vw;
+      height: 10vh;
+      font-size : 50px;
+      justify-content: space-around;
+      text-align: center;
+    }
+    #root>span{
+      width:40vw;
+      height:15vh;
+      text-align : center;
+      font-size:4vw;
+    }
+    #root>div{
+      width:40vw;
+      height:10vh;
+      display: flex;
+      justify-content: space-around;
+    }
+    #root>div>button:nth-child(1){
+      width:10vw;
+      height:7vh;
+      font-size:2vw;
+    }
+    #root>div>button:nth-child(2){
+      width:10vw;
+      height:7vh;
+      font-size:2vw;
+    }
+    #root>div>button:nth-child(3){
+      width:10vw;
+      height:7vh;
+      font-size:2vw;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>COUNTER</h1>
+    <span id="value">0</span>
+    <div class="button container">
+      <button class="btn-decrese">decrese</button>
+      <button class="btn-reset">reset</button>
+      <button class="btn-increse">increse</button>
+    </div>
+  </div>
+  <script>
+    /*body style*/
+    document.body.style.display='flex'
+    document.body.style.justifyContent ="center"
+    document.body.style.alignItems = "center"
+    document.body.style.width = "100vw"
+    document.body.style.height = "100vh"
+    /*선언*/
+    let count=0;
+    let btn_d = document.querySelector(".btn-decrese")
+    let btn_r = document.querySelector(".btn-reset")
+    let btn_i = document.querySelector(".btn-increse")
+    let value = document.getElementById("value")
+    
+    /* 이벤트*/
+    btn_i.addEventListener('click',function(){
+
+      count = parseInt(count) + 1
+      value.textContent = count
+      if(count>0){
+      value.style.color = "red"
+    }else if(count===0){
+      value.style.color = "green"
+    }
+    })
+    btn_r.addEventListener('click',function(){
+
+    count = 0
+    value.textContent = count
+    value.style.color = "green"
+    })
+    btn_d.addEventListener('click',function(){
+
+    count = parseInt(count) - 1
+    value.textContent = count
+    if(count<0){
+      value.style.color = "blue"
+    }else if(count===0){
+      value.style.color = "green"
+    }
+    }) 
+
+
+  </script>
+</body>
+</html>

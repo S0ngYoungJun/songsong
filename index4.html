@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+/* 
+  *스타일링  
+*/
+  *{
+    margin:0;
+    padding:0;
+  }
+  #root{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    display : flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+  }
+  #root>div:nth-child(1){
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 80vh;
+  }
+  #root>div:nth-child(1)>div{
+    width:20vw;
+    height: 50vh;
+  }
+  h2{
+    background-color: black;
+    color:white;
+    font-size:2vw;
+    border-radius: 15px;
+    margin-top : 2vh
+  }
+  .color{
+    color :aqua;
+    font-size:40px;
+  }
+  .btn-one{
+    margin-top : 5vh;
+    background-color: darkgray;
+    color:white;
+    border-radius: 10px;
+    width:14vw;
+    height:8vh;
+    font-size:2vw;
+  }
+  #root>div:nth-child(2){
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 80vh;
+  }
+  #root>div:nth-child(2)>div{
+    width:20vw;
+    height: 50vh;
+  }
+  h2{
+    background-color: black;
+    color:white;
+    font-size:2vw;
+    border-radius: 15px;
+    margin-top : 2vh
+  }
+  .colortwo{
+    color :aqua;
+    font-size:40px;
+  }
+  .btn-two{
+    margin-top : 5vh;
+    background-color: darkgray;
+    color:white;
+    border-radius: 10px;
+    width:14vw;
+    height:8vh;
+    font-size:2vw;
+  }
+  #root>div:nth-child(3){
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 80vh;
+  }
+  #root>div:nth-child(3)>div:nth-child(1){
+    width:20vw;
+    height: 50vh;
+  }
+  
+  .btn-three{
+    margin-top : 12vh;
+    background-color: darkgray;
+    color:white;
+    border-radius: 10px;
+    width:14vw;
+    height:8vh;
+    font-size:2vw;
+  }
+</style>
+</head>
+<body>
+  <!-- * html 박스 -->
+  <div id="root">
+    <div class="container">
+      <div id = "board"></div>
+      <h2><span class="color"></span></h2>
+      <button class="btn-one" id="btn">click random</button>
+    </div>
+    <div class="contarinertwo">
+      <div id="boardtwo"></div>
+      <h2><span class="colortwo"></span></h2>
+      <button class="btn-two" id="btntwo">click random</button>
+    </div>
+    <div class="contarinerthree">
+      <div id="boardthree"></div>
+      <button class="btn-three" id="btnthree">Mix!</button>
+    </div>
+  </div>
+  <script>
+  /** 변수선언 */
+  let root = document.getElementById("root")
+  console.dir(root)
+  let hex = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+  let btn = document.getElementById("btn")
+  let color = document.querySelector(".color");
+  let board = document.getElementById("board")
+  let btntwo = document.getElementById("btntwo")
+  let colortwo = document.querySelector(".colortwo");
+  let boardtwo = document.getElementById("boardtwo")
+  let btnthree = document.getElementById("btnthree")
+  let boardthree = document.getElementById("boardthree")
+  // 버튼 1 클릭 이벤트 // 
+  btn.addEventListener("click", function(){
+    let hexColor = "#"
+    for (let i=0; i<6; i++) {
+      hexColor += hex[getRandomNumber()];
+    }
+    color.textContent = hexColor;
+    board.style.backgroundColor = hexColor;
+  })
+  // 버튼 2 클릭 이벤트//
+  btntwo.addEventListener("click", function(){
+    let hexColortwo = "#"
+    for (let i=0; i<6; i++) {
+      hexColortwo += hex[getRandomNumber()];
+    }
+    colortwo.textContent = hexColortwo;
+    boardtwo.style.backgroundColor = hexColortwo;
+  })
+  // 버튼 mix 클릭 이벤트//
+  btnthree.addEventListener("click", function(){
+    let one = board.style.backgroundColor
+    let two = boardtwo.style.backgroundColor
+    boardthree.style.backgroundColor = `color-mix(in srgb, ${one}, ${two})`
+  })
+
+/* 랜덤 설정*/
+function getRandomNumber(){
+  return Math.floor(Math.random()*hex.length);
+}
+
+  </script>
+</body>
+</html>

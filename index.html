@@ -5,198 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing: border-box;
-    }
-    body{
-      background-color: #e2e2e2;
-    }
-    @media (min-width:700px) and (max-width:1920px){
-    #navmain{
-      background-color: white;
-      width:100vw;
-      height:8vh;
-      box-shadow: 0px 0px 10px gray;
-      justify-content: center;
-      display: flex;
-      align-items: center;
-      }
-    .navcenter{
-      width:80vw;
-      height:6vh;
-      display:flex;
-      align-items: center;
-      justify-content:space-between;
-    } 
-    .navcenter>div:nth-child(1){
-      width:10vw;
-      height:6vh;
-      display:flex;
-      
-      justify-content: center;
-      align-items: center;
-      font-size: 2vw;
-      background: linear-gradient(to right top, #861657, #ffa69e);
-      color: transparent;
-      -webkit-background-clip: text;
-    }
-    .navcenter>div:nth-child(1)>a>img{
-      width:15vw;
-      height:5vh;
-      display:none;
-    }
-    .navcenter>ul:nth-child(2){
-      list-style:none;
-      display:flex;
-      width:30vw;
-      height:6vh;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navcenter>ul:nth-child(2)>li {
-      float: left;
-      display:flex;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 2vw;
-      background: linear-gradient(to right top, #333ccc, #ffa69e);
-      color: transparent;
-      -webkit-background-clip: text;
-    }
-    .navcenter>ul:nth-child(3){
-      list-style:none;
-      display:flex;
-      width:17vw;
-      height:6vh;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navcenter>ul:nth-child(3)>li {
-      float: left;
-      display:flex;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 1vw;
-    }
-    a {
-      background: linear-gradient(to right top, #bf33cc, #ddff9e);
-      color: transparent;
-      -webkit-background-clip: text;
-
-}
-img{
-  width:2vw;
-  height:4vh;
-}}
-.navcenter>div:nth-child(1)>a>i{ display:none;}
-    
-@media (min-width:0) and (max-width: 700px) {
-  *{
-      margin:0;
-      padding:0;
-      box-sizing: border-box;
-    }
-    body{
-      background-color: #e2e2e2;
-    }
-  #navmain {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #5f85bb;
-      
-      box-shadow: 0px 0px 10px gray;
-  }
-  .navcenter {
-    flex-direction: column;
-    align-items: flex-start;
-    
-  }
-  .navcenter>div:nth-child(1){
-      width:100vw;
-      height:7vh;
-      display:flex;
-      justify-content: space-between;
-      margin-left:10vw;
-      align-items: center;
-      font-size: 4vh;
-      color: white
-    }
-    .navcenter>div:nth-child(1)>a>img{
-      width:15vw;
-      height:5vh;
-    }
-    .menu{
-      display:none;
-      width:100vw;
-      height:20vh;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column;
-    }
-    .menu>li {
-      width: 100%;
-      
-      height:5vh;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 3vh;
-      color: white;
-    }
-    .icons{
-      list-style:none;
-      display:none;
-      width:100vw;
-      height:5vh;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .icons>li {
-      float: left;
-      
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 1vw;
-    }
-img{
-  width:25vw;
-  height:3vh;
-}
-a{display:block;
-  width: 25vw;
-  height: 3vh;
-}
-.navcenter>div:nth-child(1)>i{font-size: 30px;}
-.menu.active,.icons.active {
-  display: flex;
-  }
-}
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://kit.fontawesome.com/82b8c79a8f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="navmain">
   <div class="navcenter">
     <div>송영준
-      <a href="#" arialabel="burger.svg" class="toggleBtn"> <img src="burger.svg" alt='burger'/><i class="fa-solid fa-bars"></i></a>
+      <a href="#" arialabel="burger" class="toggleBtn"> <i class="fa-solid fa-bars fa-2x"></i></a>
     </div>
     <ul class="menu">
-      <li>1번</li>
-      <li>2번</li>
-      <li>3번</li>
-      <li>4번</li>
+      <li><a href="http://localhost:8080/index1.html">1번</a></li>
+      <li><a href="http://localhost:8080/index2.html">2번</a></li>
+      <li><a href="http://localhost:8080/index3.html">3번</a></li>
+      <li><a href="http://localhost:8080/index4.html">4번</a></li>
     </ul>
     <ul class="icons">
       <li><a href="http://google.com" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google"/></a></li>
-      <li><a href="https://twitter.com/" target="blank"><img src="naver.svg" alt="twitter"/><i class="fa-brands fa-twitter"></i></a></li>
-      <li><a href="https://github.com/" target="blank"><img src="github.svg" alt="github"/><i class="fa-brands fa-github"></i></a></li>
-      <li><a href="https://www.facebook.com/" target="blank"><img src="notion.svg" alt="facebook"/><i class="fa-brands fa-facebook"></i>
+      <li><a href="https://twitter.com/" target="blank"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+      <li><a href="https://github.com/" target="blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
+      <li><a href="https://www.facebook.com/" target="blank"><i class="fa-brands fa-facebook fa-2x"></i>
       </a></li>
     </ul>
   </div>
@@ -210,6 +38,7 @@ toggleBtn.addEventListener('click', () => {
   menu.classList.toggle('active')
   icons.classList.toggle('active')
 })
+
 </script>
 </body>
 </html>
